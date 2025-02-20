@@ -10,16 +10,7 @@ public extension VerIDCommonTypes.Image {
     /// - Returns: Serialized image
     /// - Since: 1.0.0
     func serialized() throws -> Data {
-        guard let cgImage = self.toCGImage() else {
-            throw ImageError.imageConversionFailed
-        }
-        let jxl = try JXLCoder.encode(image: UIImage(cgImage: cgImage), colorSpace: .rgb, compressionOption: .loseless)
-        return try Image3D.with { image in
-            image.jxl = jxl
-            if let depthData = self.depthData {
-                image.depthMap = Image.depthMapFromDepthData(depthData)
-            }
-        }.serializedData()
+        try self.toImage3D().serializedData()
     }
     
     /// Creates an image from protocol buffer serialized data
@@ -104,6 +95,22 @@ public extension VerIDCommonTypes.Image {
             pt.y = Float(calibrationData.lensDistortionCenter.y) * scaleY
         }
         return depthMap
+    }
+}
+
+extension VerIDCommonTypes.Image {
+    
+    func toImage3D() throws -> Image3D {
+        guard let cgImage = self.toCGImage() else {
+            throw ImageError.imageConversionFailed
+        }
+        let jxl = try JXLCoder.encode(image: UIImage(cgImage: cgImage), colorSpace: .rgb, compressionOption: .loseless)
+        return Image3D.with { image in
+            image.jxl = jxl
+            if let depthData = self.depthData {
+                image.depthMap = Image.depthMapFromDepthData(depthData)
+            }
+        }
     }
 }
 

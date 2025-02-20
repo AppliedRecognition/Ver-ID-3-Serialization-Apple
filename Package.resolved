@@ -17,6 +17,14 @@
         "revision" : "ebc7251dd5b37f627c93698e4374084d98409633",
         "version" : "1.28.2"
       }
+    },
+    {
+      "identity" : "ver-id-common-types-apple",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git",
+      "state" : {
+        "revision" : "0debdd8d6f1c04b6b7dfd4161f27911c06b2e174"
+      }
     }
   ],
   "version" : 2

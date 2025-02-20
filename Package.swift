@@ -24,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Serialization",
-            dependencies: [,
+            dependencies: [
                 .product(name: "VerIDCommonTypes", package: "Ver-ID-Common-Types-Apple"),
                 .product(name: "JxlCoder", package: "jxl-coder-swift"),
                 .product(name: "SwiftProtobuf", package: "swift-protobuf")

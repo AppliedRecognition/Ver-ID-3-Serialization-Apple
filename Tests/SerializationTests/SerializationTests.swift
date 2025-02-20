@@ -36,4 +36,15 @@ final class SerializationTests: XCTestCase {
         let deserializedFace = try Face.deserialize(data)
         XCTAssertEqual(face, deserializedFace)
     }
+    
+    func testSerializeImagePackage() throws {
+        guard let url = Bundle.module.url(forResource: "image", withExtension: "bin", subdirectory: nil) else {
+            XCTFail()
+            return
+        }
+        let data = try Data(contentsOf: url)
+        let image = try Image.deserialize(data)
+        let package = ImagePackage(image: image, face: self.face)
+        XCTAssertNoThrow(try package.serialized())
+    }
 }
