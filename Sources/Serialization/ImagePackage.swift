@@ -15,6 +15,11 @@ public struct ImagePackage {
     public let image: VerIDCommonTypes.Image
     public let face: VerIDCommonTypes.Face
     
+    public init(image: VerIDCommonTypes.Image, face: VerIDCommonTypes.Face) {
+        self.image = image
+        self.face = face
+    }
+    
     public func serialized() throws -> Data {
         let image3d = try self.image.toImage3D()
         let face = Face.with { face in
