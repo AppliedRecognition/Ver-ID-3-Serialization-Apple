@@ -16,7 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/awxkee/jxl-coder-swift", .upToNextMajor(from: "1.7.3")),
-        .package(url: "https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git", .upToNextMinor(from: "1.1.0")),
+        .package(url: "https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git", .upToNextMajor(from: "1.1.0")),
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.28.2")
     ],
     targets: [
