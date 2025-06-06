@@ -11,6 +11,6 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Sources/Serialization/**/*.swift"
   spec.dependency "SwiftProtobuf", ">= 1.28.2", "< 2.0.0"
   spec.dependency "JxlCoder", ">= 1.7.3", "< 2.0.0"
-  spec.dependency "VerIDCommonTypes", "~> 1.0"
+  spec.dependency "VerIDCommonTypes", "~> 1.2"
 
 end
