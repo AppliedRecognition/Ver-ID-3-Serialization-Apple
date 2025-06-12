@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "VerIDSerialization"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "Protocol buffer serialization of common Ver-ID 3 types"
   spec.homepage     = "https://github.com/AppliedRecognition/Ver-ID-3-Serialization-Apple"
   spec.license      = { :type => "Commercial", :file => "LICENCE.txt" }
