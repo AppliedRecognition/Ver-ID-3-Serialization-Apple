@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Serialization",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -15,7 +15,7 @@ let package = Package(
             targets: ["Serialization"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/awxkee/jxl-coder-swift", .upToNextMajor(from: "1.7.3")),
+        .package(url: "https://github.com/awxkee/jxl-coder-swift.git", .upToNextMajor(from: "1.8.0")),
         .package(url: "https://github.com/AppliedRecognition/Ver-ID-Common-Types-Apple.git", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.28.2")
     ],
