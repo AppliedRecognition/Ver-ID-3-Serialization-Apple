@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/awxkee/jxl-coder-swift",
       "state" : {
-        "revision" : "179264567c7dc0dd489859d5572773222358a7f5",
-        "version" : "1.7.3"
+        "revision" : "20b7f845ed9b44b0d1bc5463e4b1d143b305db87",
+        "version" : "1.8.0"
       }
     },
     {
